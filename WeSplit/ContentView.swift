@@ -26,10 +26,8 @@ struct ContentView: View {
     }
     
     let tipPercentages = [10, 15, 20, 25, 0]
-    //let orderAmount = Double(checkAmount) ?? 0
-    //let tipSelection = Double(tipPercentages[tipPercentage])
     
-    var totalCheck: Double {
+    var bigTotal: Double {
         let tipSelection = Double(tipPercentages[tipPercentage])
         let orderAmount = Double(checkAmount) ?? 0
         
@@ -63,7 +61,7 @@ struct ContentView: View {
                 }
                 // bonus 2 Montant total à partager
                 Section(header: Text("Montant total avec le pourboire")) {
-                    Text("\(totalCheck, specifier: "%.2f") €")
+                    Text("\(bigTotal, specifier: "%.2f") €")
                 }
                 
             }.navigationBarTitle("Partage d'addition")
