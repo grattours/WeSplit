@@ -62,6 +62,7 @@ struct ContentView: View {
                 // bonus 2 Montant total à partager
                 Section(header: Text("Montant total avec le pourboire")) {
                     Text("\(bigTotal, specifier: "%.2f") €")
+                    .foregroundColor(tipPercentage == 4 ? .red : .black)
                 }
                 
             }.navigationBarTitle("Partage d'addition")
